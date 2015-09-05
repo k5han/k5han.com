@@ -1,0 +1,26 @@
+<div id="disqus_thread">
+  <a href="//disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>.
+</div>
+
+<script>
+  var disqus_shortname = "k5han-blog",
+      disqus_title = "{{ post.title }}",
+      disqus_identifier = "{{ post.url }}",
+      disqus_developer = 0;
+
+  (function(d) {
+    var embed = d.createElement("script"),
+        count = d.createElement("script");
+    embed.async = count.async = true;
+    embed.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    count.src = "//" + disqus_shortname + ".disqus.com/count.js";
+
+    // If comments aren't disabled for the article, load the embed and count script
+    if ("{{ post.comments }}" !== "false") {
+      d.getElementsByTagName("head")[0].appendChild(embed);
+      d.getElementsByTagName("head")[0].appendChild(count);
+    } else {
+      d.getElementById("disqus_thread").innerHTML = "";
+    }
+  })(document);
+</script>

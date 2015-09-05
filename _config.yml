@@ -1,0 +1,38 @@
+# Permalinks
+permalink: pretty
+relative_permalinks: true
+
+# Code snippet highlighting
+highlighter: pygments
+
+# Setup
+title:               Kevin Shanahan
+url:                 http://k5han.com
+paginate:            1
+baseurl:             ""
+
+# List of pages to include in the header of the website.
+pages_list:       
+  Archive:			'/archive'
+  About:			'/about'
+
+# Exclude these files from compilation
+exclude: [Gemfile, Gemfile.lock, README.md, vendor, bin]
+
+# Don't produce a 'related posts' index
+lsi: false
+
+# sass @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Kevin Shanahan
+  email:             kev.a.shanahan@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/k5han

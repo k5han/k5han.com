@@ -1,0 +1,21 @@
+<article>
+  <header>
+    <h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
+    <h2>{{ page.date | date: "%A %d, %B %Y" }}</h2>
+    {% if post.comments != false %}
+    <h3 class="comment-count"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">Comments</a></h3>
+    {% endif %}
+    {% if page.tags != empty %}
+    <ul class="tags">{% for tag in page.tags %}{{ tag }}<li>
+    </li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+
+  {% if content %}
+  {{ content }}
+  {% else %}
+  {{ page.content }}
+  {% endif %}
+  {% include comments.html %}
+</article>

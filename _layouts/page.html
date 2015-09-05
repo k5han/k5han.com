@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article>
+{% if page.image %}
+  <img class="u-mtm" src="{{page.image.src}}" alt="{{page.image.alt}}">
+{% endif %}
+
+<div class="page">
+  {{ content }}
+</div>
+</article>
